@@ -93,12 +93,7 @@ ItemPage {
 
     Flickable {
         id: scrollWidget
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: configuration.top
-        }
+        anchors.fill: parent
         clip: true
         contentHeight: content.height
         boundsBehavior: (contentHeight > parent.height) ?
@@ -366,18 +361,6 @@ ItemPage {
             }
         } // Column inside flickable.
     } // Flickable
-
-    Column {
-        id: configuration
-
-        height: childrenRect.height
-
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-        }
-    }
 
     Connections {
         id: postClickBatchHandler
